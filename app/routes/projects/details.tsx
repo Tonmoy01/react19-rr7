@@ -21,7 +21,7 @@ export function HydrateFallback() {
 }
 
 const ProjectDetailsPage = ({ loaderData }: Route.ComponentProps) => {
-  const project = loaderData as Project;
+  const project = (loaderData as { projects: Project[] }).projects[0];
 
   return (
     <div>
